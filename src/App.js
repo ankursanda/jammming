@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Playlist from './playlist/Playlist';
+import SearchBar from './searchBar/SearchBar';
+import SearchResults from './searchResults/SearchResults';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const songDetails = [{
+    id: 1,
+    song: 'song1',
+    artist: 'artist1',
+    album: 'album1',
+  },{
+    id: 2,
+    song: 'song2',
+    artist: 'artist2',
+    album: 'album2',
+  },{
+    id: 3,
+    song: 'song3',
+    artist: 'artist3',
+    album: 'album3',
+  }]
+  return (<div>
+    <SearchBar />
+    <SearchResults songDetails={songDetails}/>
+    <Playlist />
     </div>
   );
+  
+    
 }
 
 export default App;
