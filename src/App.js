@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import './App.css';
 import Playlist from './playlist/Playlist';
 import SearchBar from './searchBar/SearchBar';
@@ -21,10 +22,26 @@ function App() {
     artist: 'artist3',
     album: 'album3',
   }]
-  return (<div>
+  const [playlistTitle, setPlaylistTitle] = useState('');
+  const [playlistItems, setPlaylistItems] = useState([]);
+
+  const addItem = songId => {
+    songDetails.forEach((item) => {
+      if(item.id === songId && !playlistItems.some((i) => i.id === item.id)){
+        setPlaylistItems((prev) => [...prev,{id: item.id, song: item.song, artist: item.artist, album: item.artist}])
+      }
+    })
+  }
+  const removeItem = songId => {
+    setPlaylistItems(
+      playlistItems.filter((item) => item.id !== songId)
+    )
+  }
+  return (
+    <div>
     <SearchBar />
-    <SearchResults songDetails={songDetails}/>
-    <Playlist />
+    <SearchResults songDetails={songDetails} addItem={addItem}/>
+    <Playlist title={playlistTitle} changeTitle={setPlaylistTitle} playlistItems={playlistItems} removeItem={removeItem}/>
     </div>
   );
   
