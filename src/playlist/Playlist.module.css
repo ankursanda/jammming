@@ -1,0 +1,79 @@
+.main{
+    position: relative;
+    background-color: rgba(104, 30, 174, 0.826);
+    margin: 10px;
+    width: 400px;
+    aspect-ratio: 9/16;
+    display: grid;
+    overflow: hidden;
+}
+.artists{
+    padding-left: 1px;
+    display: block;
+    list-style-type: none;
+  }
+.search{
+    position: relative;
+    top: 35px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-style: none;
+    width: 400px;
+    border-bottom: 2px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+
+.items {
+    position: relative;
+    top: 35px;
+    left: 5px;
+    display: block;
+    list-style-type: none;
+    width: 200px;
+    margin: flex;
+    margin-bottom: 8px;
+  }
+
+
+.button{
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    
+}
+
+.button::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    width: 12px;
+    background-color: black;
+    content: "";
+    transform: translate(-50%, -50%);
+}
+.submit{
+    position: relative;
+    top: 50px;
+    align-items: center;
+    justify-content: center;
+    transform: translate(30%, 0%);
+    height: 60px;
+    width: 200px;
+    background-color: rgba(15, 136, 96, 0.629);
+}
+
+.search:focus{
+    outline: none;
+}

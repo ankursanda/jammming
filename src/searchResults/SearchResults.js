@@ -1,17 +1,19 @@
 import React from 'react';
+import styles from './SearchResults.module.css';
 
-function SearchResults({songDetails, addItem}){
+function SearchResults({tracks, addItem}){
     return(
-        <div>
+        <div className={styles.main}>
             <h1>Search Results</h1>
-            <ul>{songDetails.map((item) => 
-            {return(<ul>
-                <li key={item.id}>{item.song}</li>
-                <li key={item.id}>{item.artist}</li>
-                <li key={item.id}>{item.album}</li>
-                <button key={item.id} onClick={() => addItem(item.id)}>Add</button>
+            <div id={styles.list}>
+            <ul>{tracks.map((item,i) => 
+            {return(<ul key={i} className={styles.items}>
+                <li><strong>{item['name']}</strong></li>
+                <ul className={styles.artists}>{item['artists'].map((item,i) => <li key={i}>{item['name']}</li>)}</ul>
+                <button className={styles.button} onClick={() => addItem(item['id'])}></button>
                 </ul>)
         })}</ul>
+            </div>
         </div>
     )
 }

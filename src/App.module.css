@@ -1,0 +1,24 @@
+body{
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+.img > img {
+    z-index: 1;
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px) hue-rotate(290deg);
+}
+
+.main{
+    position: relative;
+    justify-content: center;
+    margin:  0px auto ;
+    z-index: 100;
+}
+.blocks{
+    justify-content: center;
+    display: flex;
+}

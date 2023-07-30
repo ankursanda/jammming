@@ -1,0 +1,25 @@
+.button{
+    height: 50px;
+    width: 200px;
+    position: relative;
+    z-index: 1;
+    font-size: medium;
+    text-align: right;
+    font-weight: bold;
+    background-color: rgba(15, 136, 96, 0.629);
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.img{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    border-radius: 10%;
+}
+.main{
+    margin: 5px;
+    padding: 4px;
+}

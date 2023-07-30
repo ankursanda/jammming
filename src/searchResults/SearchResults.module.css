@@ -1,0 +1,58 @@
+.main{
+    
+    background-color: rgba(104, 30, 174, 0.826);
+    margin: 10px;
+    width: 400px;
+    aspect-ratio: 9/16;
+    display: grid;
+    align-content: flex-start;
+}
+.button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid black;
+    position: relative;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .button::before,
+  .button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    width: 12px;
+    background-color: #000;
+    transform: translate(-50%, -50%);
+  }
+  
+  .button::before {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  h1{
+    font-weight: bold;
+    padding: 10px;
+    transform: translate(0%, -10%);
+    border-bottom: 1px solid black;
+    align-content: center;
+  }
+  .artists{
+    padding-left: 1px;
+    display: block;
+    list-style-type: none;
+  }
+  .items {
+    align-content: center;
+    position: relative;
+    margin-left: 50px;
+    flex-direction: column;
+    list-style-type: none;
+    margin-bottom: 2px;
+    transform: translate(-40%, -20%);
+  }
+  #list{
+    padding-left: 50px;
+  }
